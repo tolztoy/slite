@@ -5,79 +5,79 @@ const certs = [
   "Learning Linux for LFCA Certification (Specialization)",
 ];
 
+const internBullets = [
+  "Built and maintained responsive client websites using WordPress and Elementor",
+  "Managed e-commerce product listings and inventory using WooCommerce",
+  "Conducted UI/UX audits across multiple live client sites, fixing layout and responsiveness issues",
+  "Applied on-page SEO (keyword optimization, meta tags, alt text) for a digital content client",
+];
+
 export default function Experience() {
   return (
-    <section id="experience" style={{ padding: "96px 48px", maxWidth: 1280, margin: "0 auto" }}>
+    <section id="experience" className="mx-auto max-w-7xl px-6 py-20 lg:px-12 lg:py-24">
       {/* Section label */}
-      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 48 }}>
-        <div style={{ width: 30, height: 30, background: "#E5470B", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div className="mb-12 flex items-center gap-2.5">
+        <span className="flex h-[30px] w-[30px] items-center justify-center rounded-lg bg-accent">
           <svg width="16" height="16" fill="none" stroke="#fff" strokeWidth="2" viewBox="0 0 24 24">
             <rect x="2" y="7" width="20" height="14" rx="2" />
             <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
           </svg>
-        </div>
-        <span style={{ fontFamily: "var(--font-bebas)", fontSize: 22, letterSpacing: "0.06em" }}>EXPERIENCE & EDUCATION</span>
-        <span style={{ fontSize: 12, color: "#E5470B", fontWeight: 600, letterSpacing: "0.08em" }}>// 03</span>
+        </span>
+        <h2 className="font-display text-[22px] tracking-[0.06em]">EXPERIENCE &amp; EDUCATION</h2>
+        <span className="text-xs font-semibold tracking-[0.08em] text-accent">{"// 03"}</span>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 }} className="exp-grid">
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
         {/* Left */}
         <div>
-          <div style={{ fontFamily: "var(--font-bebas)", fontSize: 28, color: "#1a1a1a", marginBottom: 28, paddingBottom: 12, borderBottom: "1.5px solid rgba(0,0,0,0.12)" }}>
+          <h3 className="mb-7 border-b-[1.5px] border-black/10 pb-3 font-display text-[28px] text-ink">
             Work Experience
-          </div>
-          <div style={{ padding: "28px 0", borderBottom: "1px solid rgba(0,0,0,0.12)" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
-              <div style={{ fontSize: 17, fontWeight: 700, color: "#1a1a1a" }}>Software Development Intern</div>
-              <div style={{ fontSize: 12, color: "#E5470B", fontWeight: 600, letterSpacing: "0.05em", whiteSpace: "nowrap" }}>Oct 2025 – Feb 2026</div>
+          </h3>
+          <div className="border-b border-black/10 py-7">
+            <div className="mb-2 flex items-start justify-between gap-4">
+              <div className="text-[17px] font-bold text-ink">Software Development Intern</div>
+              <div className="whitespace-nowrap text-xs font-semibold tracking-[0.05em] text-accent">
+                Oct 2025 – Feb 2026
+              </div>
             </div>
-            <div style={{ fontSize: 14, color: "#6b6b6b", fontWeight: 500, marginBottom: 12 }}>Effulgence Tech · Yaoundé, Cameroon</div>
-            <ul style={{ listStyle: "none" }}>
-              {[
-                "Built and maintained responsive client websites using WordPress and Elementor",
-                "Managed e-commerce product listings and inventory using WooCommerce",
-                "Conducted UI/UX audits across multiple live client sites, fixing layout and responsiveness issues",
-                "Applied on-page SEO (keyword optimization, meta tags, alt text) for a digital content client",
-              ].map((b) => (
-                <li key={b} style={{ fontSize: 13.5, color: "#6b6b6b", lineHeight: 1.65, paddingLeft: 18, position: "relative", marginBottom: 6 }}>
-                  <span style={{ position: "absolute", left: 0, color: "#E5470B" }}>•</span>
+            <div className="mb-3 text-sm font-medium text-muted">Effulgence Tech · Yaoundé, Cameroon</div>
+            <ul className="list-none">
+              {internBullets.map((b) => (
+                <li key={b} className="relative mb-1.5 pl-4.5 text-[13.5px] leading-[1.65] text-muted">
+                  <span className="absolute left-0 text-accent">•</span>
                   {b}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div style={{ fontFamily: "var(--font-bebas)", fontSize: 28, color: "#1a1a1a", marginBottom: 28, paddingBottom: 12, borderBottom: "1.5px solid rgba(0,0,0,0.12)", marginTop: 40 }}>
+          <h3 className="mb-7 mt-10 border-b-[1.5px] border-black/10 pb-3 font-display text-[28px] text-ink">
             Education
-          </div>
-          <div style={{ padding: "28px 0" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
-              <div style={{ fontSize: 17, fontWeight: 700, color: "#1a1a1a" }}>B.Sc. Software Engineering</div>
-              <div style={{ fontSize: 12, color: "#E5470B", fontWeight: 600, letterSpacing: "0.05em", whiteSpace: "nowrap" }}>Oct 2023 – Jul 2026</div>
+          </h3>
+          <div className="py-7">
+            <div className="mb-2 flex items-start justify-between gap-4">
+              <div className="text-[17px] font-bold text-ink">B.Sc. Software Engineering</div>
+              <div className="whitespace-nowrap text-xs font-semibold tracking-[0.05em] text-accent">
+                Oct 2023 – Jul 2026
+              </div>
             </div>
-            <div style={{ fontSize: 14, color: "#6b6b6b", fontWeight: 500 }}>The ICT University · Yaoundé, Cameroon</div>
+            <div className="text-sm font-medium text-muted">The ICT University · Yaoundé, Cameroon</div>
           </div>
         </div>
 
         {/* Right */}
         <div>
-          <div style={{ fontFamily: "var(--font-bebas)", fontSize: 28, color: "#1a1a1a", marginBottom: 28, paddingBottom: 12, borderBottom: "1.5px solid rgba(0,0,0,0.12)" }}>
+          <h3 className="mb-7 border-b-[1.5px] border-black/10 pb-3 font-display text-[28px] text-ink">
             Certificates
-          </div>
+          </h3>
           {certs.map((c) => (
-            <div key={c} style={{ display: "flex", alignItems: "center", gap: 14, padding: "16px 0", borderBottom: "1px solid rgba(0,0,0,0.12)" }}>
-              <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#E5470B", flexShrink: 0 }} />
-              <div style={{ fontSize: 14, color: "#1a1a1a", fontWeight: 500 }}>{c}</div>
+            <div key={c} className="flex items-center gap-3.5 border-b border-black/10 py-4">
+              <span className="h-2 w-2 shrink-0 rounded-full bg-accent" />
+              <div className="text-sm font-medium text-ink">{c}</div>
             </div>
           ))}
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 768px) {
-          .exp-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }

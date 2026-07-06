@@ -1,5 +1,3 @@
-"use client";
-
 import {
   SiReact,
   SiTypescript,
@@ -29,68 +27,44 @@ const skills: { Icon: IconType; name: string; color: string }[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" style={{ background: "#111010", padding: "96px 48px" }}>
-      <div
-        style={{ maxWidth: 1280, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 2fr", gap: 80, alignItems: "start" }}
-        className="skills-inner"
-      >
+    <section id="skills" className="bg-dark px-6 py-20 lg:px-12 lg:py-24">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 md:grid-cols-[1fr_2fr] md:gap-20">
         {/* Left */}
         <div>
-          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-            <div style={{ width: 30, height: 30, background: "#E5470B", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div className="mb-3 flex items-center gap-2.5">
+            <span className="flex h-[30px] w-[30px] items-center justify-center rounded-lg bg-accent">
               <svg width="16" height="16" fill="none" stroke="#fff" strokeWidth="2" viewBox="0 0 24 24">
                 <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
               </svg>
-            </div>
-            <span style={{ fontFamily: "var(--font-bebas)", fontSize: 22, letterSpacing: "0.06em", color: "#fff" }}>SKILLS</span>
-            <span style={{ fontSize: 12, color: "#E5470B", fontWeight: 600, letterSpacing: "0.08em" }}>// 02</span>
+            </span>
+            <span className="font-display text-[22px] tracking-[0.06em] text-white">SKILLS</span>
+            <span className="text-xs font-semibold tracking-[0.08em] text-accent">{"// 02"}</span>
           </div>
-          <div style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(40px, 4vw, 58px)", color: "#fff", lineHeight: 1.05, margin: "12px 0 20px" }}>
-            Tech I<br />Build With.
-          </div>
-          <div style={{ fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.7 }}>
+          <h2 className="mb-5 mt-3 font-display text-[clamp(40px,4vw,58px)] leading-[1.05] text-white">
+            Tech I
+            <br />
+            Build With.
+          </h2>
+          <p className="text-[15px] leading-[1.7] text-white/60">
             From frontend to infra — full coverage across the modern web and mobile stack.
-          </div>
+          </p>
         </div>
 
         {/* Right */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 16 }} className="skills-grid">
+        <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:grid-cols-5">
           {skills.map(({ Icon, name, color }) => (
             <div
               key={name}
-              style={{
-                background: "rgba(255,255,255,0.05)",
-                border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: 16,
-                padding: "24px 16px",
-                textAlign: "center",
-                transition: "border-color .2s, background .2s",
-                cursor: "default",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = "#E5470B";
-                (e.currentTarget as HTMLElement).style.background = "rgba(229,71,11,0.08)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)";
-                (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.05)";
-              }}
+              className="rounded-2xl border border-white/[0.08] bg-white/5 px-4 py-6 text-center transition-colors hover:border-accent hover:bg-accent/[0.08]"
             >
-              <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
+              <div className="mb-3 flex justify-center">
                 <Icon size={32} color={color} />
               </div>
-              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.65)", fontWeight: 600, letterSpacing: "0.04em" }}>{name}</div>
+              <div className="text-xs font-semibold tracking-wide text-white/70">{name}</div>
             </div>
           ))}
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 768px) {
-          .skills-inner { grid-template-columns: 1fr !important; gap: 40px !important; }
-          .skills-grid { grid-template-columns: repeat(3, 1fr) !important; }
-        }
-      `}</style>
     </section>
   );
 }

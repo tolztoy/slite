@@ -1,45 +1,24 @@
-"use client";
-
 export default function CTA() {
   return (
-    <section id="contact" style={{ background: "#111010", padding: "120px 48px", textAlign: "center", position: "relative", overflow: "hidden" }}>
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background: "radial-gradient(ellipse at 50% 50%, rgba(229,71,11,0.15) 0%, transparent 65%)",
-          pointerEvents: "none",
-        }}
-      />
-      <div style={{ maxWidth: 700, margin: "0 auto", position: "relative" }}>
-        <div style={{ fontSize: 13, letterSpacing: "0.14em", textTransform: "uppercase", color: "#E5470B", fontWeight: 600, marginBottom: 20 }}>
+    <section id="contact" className="relative overflow-hidden bg-dark px-6 py-24 text-center lg:px-12 lg:py-30">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(229,71,11,0.15)_0%,transparent_65%)]" />
+      <div className="relative mx-auto max-w-[700px]">
+        <div className="mb-5 text-[13px] font-semibold uppercase tracking-[0.14em] text-accent">
           Let&apos;s work together
         </div>
-        <h2 style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(52px, 7vw, 96px)", color: "#fff", lineHeight: 1.0, marginBottom: 24 }}>
-          BUILD SOMETHING<br />
-          <span style={{ color: "#E5470B" }}>GREAT</span>
+        <h2 className="mb-6 font-display text-[clamp(52px,7vw,96px)] leading-none text-white">
+          BUILD SOMETHING
+          <br />
+          <span className="text-accent">GREAT</span>
         </h2>
-        <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", marginBottom: 44, lineHeight: 1.65 }}>
-          Open to full-time roles, contract work, and interesting collaborations. Based in Yaoundé — available remotely.
+        <p className="mb-11 text-base leading-[1.65] text-white/60">
+          Open to full-time roles, contract work, and interesting collaborations. Based in Yaoundé —
+          available remotely.
         </p>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <a
             href="mailto:richcalchia@gmail.com"
-            style={{
-              background: "#E5470B",
-              color: "#fff",
-              borderRadius: 100,
-              padding: "16px 36px",
-              fontSize: 16,
-              fontWeight: 600,
-              textDecoration: "none",
-              display: "flex",
-              alignItems: "center",
-              gap: 8,
-              transition: "background .2s",
-            }}
-            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "#f0612c")}
-            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "#E5470B")}
+            className="flex items-center gap-2 rounded-full bg-accent px-9 py-4 text-base font-semibold text-white transition-colors hover:bg-accent-light"
           >
             <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -51,34 +30,14 @@ export default function CTA() {
             href="https://linkedin.com/in/richcalchia"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              border: "1.5px solid rgba(255,255,255,0.2)",
-              borderRadius: 100,
-              padding: "16px 36px",
-              fontSize: 16,
-              fontWeight: 500,
-              textDecoration: "none",
-              color: "#fff",
-              transition: "border-color .2s",
-            }}
+            className="rounded-full border-[1.5px] border-white/20 px-9 py-4 text-base font-medium text-white transition-colors hover:border-accent"
           >
             LinkedIn
           </a>
         </div>
         <a
           href="mailto:richcalchia@gmail.com"
-          style={{
-            fontFamily: "var(--font-bebas)",
-            fontSize: 22,
-            color: "rgba(255,255,255,0.25)",
-            letterSpacing: "0.05em",
-            textDecoration: "none",
-            marginTop: 24,
-            display: "block",
-            transition: "color .2s",
-          }}
-          onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#E5470B")}
-          onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.25)")}
+          className="mt-6 block font-display text-[22px] tracking-[0.05em] text-white/30 transition-colors hover:text-accent"
         >
           richcalchia@gmail.com
         </a>
